@@ -1,10 +1,9 @@
 with open("04\Part 1\input.txt") as file:
   pairs = [i for i in file.read().strip().split("\n")]
 
-print("Pairs Liste VOR for schleife: ",pairs)
+#print("Pairs Liste VOR for schleife: ",pairs)
 included = 0
 times = 0
-print(type(included))
 
 for entry in pairs:
   first, seccond = entry.split(",")
@@ -25,9 +24,8 @@ for entry in pairs:
   else:
     pass
       
-  print(first, seccond)
-  print("Der Counter sagt: ",included)
+  #print(first, seccond)
+  #print("Der Counter sagt: ",included)
 
-print("So oft ist es durchgelafen: ", times)
-
+#print("So oft ist es durchgelafen: ", times)
 print("So oft ist es passiert: ", included)
