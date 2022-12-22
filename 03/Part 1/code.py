@@ -1,6 +1,10 @@
 #Öffnen und holen des Inputs
-with open("03\Part 2\input.txt") as file:
+with open("03\Part 1\input.txt") as file:
   rucksack = [i for i in file.read().strip().split("\n")]
+
+#Erstellen Var Global
+x = 0
+score = 0
 
 # Dict mit den möglichen Buchstaben incl. dem daraus folgenden Wert
 Werte = {
@@ -9,14 +13,13 @@ Werte = {
 }
 
 for entry in rucksack:
-  #V Erstellen verschiedener Variablen
-  x = 0
+  #V Erstellen verschiedener Variablen für ein Durchlauf
   erster_Teil = []
   zweiter_Teil = []
   z = 0
   p = 0
   o = 0
-  score = 0
+  Z = 1
 
   #Herausfinden der Anzahl der Inhalte eines Rucksacks
   len_rucksack = len(rucksack[x])
@@ -24,7 +27,7 @@ for entry in rucksack:
 
   # Aufteilen des Rucksacks in einzlene (prob. useless, da man es auch einfach im Code machen kann, wenn fertig verbessern)
   One_Rucksack = rucksack[x].split()
-  print("Dieser eine Rucksack besteht aus: ", One_Rucksack, "und enthält: ", len_rucksack, "Items")
+  #print("Dieser eine Rucksack besteht aus: ", One_Rucksack, "und enthält: ", len_rucksack, "Items")
 
   # Aufteilen des Inhaltes eines Rucksacks in eine Liste in jeweils einem Item pro Index und aufgeteilt in zwei Compartments 
   while z < len_rucksack:
@@ -42,18 +45,22 @@ for entry in rucksack:
   # Schauen, welcher Buchstabe in beiden vorkommt
   while p < len(erster_Teil):
     for u in erster_Teil:
-      if erster_Teil[p] in zweiter_Teil:
-        print("YAS und der Wert beträgt:", Werte[erster_Teil[p]] )
+      if erster_Teil[p] in zweiter_Teil and Z == 1:
+        #print("YAS und der Wert beträgt:", Werte[erster_Teil[p]], "Der P Wert ist:", p )
+        #print("Score in: ", score, "Score Wert: ", Werte[erster_Teil[p]], "Der Wert Z ist; ", Z)
         score = score + Werte[erster_Teil[p]]
         p = p + 1
+        Z = 2
       else:
+        #print("Nooo und Der P Wert ist:", p )
         p = p + 1
   
-  print(f"Der erste Teil ist: {erster_Teil} und die Länge beträgt {len(erster_Teil)}")
-  print(f"Der zweite Teil ist: {zweiter_Teil} und die Länge beträgt {len(zweiter_Teil)}")
-  print(f"Der aktuelle Score beträgt: {score}")
+  #print(f"Der erste Teil ist: {erster_Teil} und die Länge beträgt {len(erster_Teil)}")
+  #print(f"Der zweite Teil ist: {zweiter_Teil} und die Länge beträgt {len(zweiter_Teil)}")
+  #print(f"Der aktuelle Score beträgt: {score}")
 
   x = x + 1
 
 
-print("Der Rucksack am Ende ist: ",rucksack, "Der Score beträgt: ", score)
+#print("Der Rucksack am Ende ist: ",rucksack )
+print("Der Score beträgt: ", score)
