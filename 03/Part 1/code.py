@@ -30,7 +30,7 @@ for entry in rucksack:
   #print("Dieser eine Rucksack besteht aus: ", One_Rucksack, "und enthält: ", len_rucksack, "Items")
 
   # Aufteilen des Inhaltes eines Rucksacks in eine Liste in jeweils einem Item pro Index und aufgeteilt in zwei Compartments 
-  while z < len_rucksack:
+  while z <= len_rucksack:
     if len(erster_Teil) < (len_rucksack/2):
       for y in One_Rucksack:
         #print(y[z])
