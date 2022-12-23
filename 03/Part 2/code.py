@@ -68,16 +68,20 @@ for entry in rucksack:
 
     while z + 2 < len(rucksack[x]):
       for y in One_Rucksack:
-        print(f"Der Gesamt Score beträgt (vor dem Durchlauf des Buchstabens {RucksackDetail[z]}) beträgt: ", score)
+        #print(f"Der Gesamt Score beträgt (vor dem Durchlauf des Buchstabens {RucksackDetail[z]}) beträgt: ", score)
         if RucksackDetail[z] in RucksackDetail_Two and RucksackDetail[z] in RucksackDetail_Three and Found == False:
           score = score + Werte[RucksackDetail[z]]
-          print(f"Der aktuelle Buchstabe ist {RucksackDetail[z]} und der dazugehörige Score ist: {Werte[RucksackDetail[z]]}")
+          #print(f"--Der aktuelle Buchstabe ist {RucksackDetail[z]} und der dazugehörige Score ist: {Werte[RucksackDetail[z]]} {RucksackDetail}{RucksackDetail_Two}{RucksackDetail_Three}")
           z = z + 1
           Found = True
+        elif RucksackDetail[z] in RucksackDetail_Two and RucksackDetail[z] in RucksackDetail_Three and Found == True:
+          print("Auch Buchstaben, aber Fount True", Werte[RucksackDetail[z]])
+          z = z + 1
+
         else:
          z = z + 1
 
-    print(f"Der Rucksack im Detail ist: {RucksackDetail} und die Länge beträgt {len(RucksackDetail)}")
+    #print(f"Der Rucksack im Detail ist: {RucksackDetail} und die Länge beträgt {len(RucksackDetail)}")
     #print(f"Der aktuelle Score beträgt: {score}")
 
     x = x + 3

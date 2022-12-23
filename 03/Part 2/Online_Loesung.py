@@ -19,3 +19,5 @@ while len(rucksacks) > 0:
 rucksack_sum
 
 print(rucksack_sum)
+
+#richtige Lösung: 2508
