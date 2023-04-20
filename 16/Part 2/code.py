@@ -1,3 +1,3 @@
 print("Tweatr")
 
-print("Twitter 2")
+print("Alles reset")
