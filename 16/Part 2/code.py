@@ -12,3 +12,7 @@ class Hockey():
     def ad(self):
         sum = 1 + 1
         print(sum)
+
+    def sub(self):
+        sum = 1 - 1
+        print(sum)
