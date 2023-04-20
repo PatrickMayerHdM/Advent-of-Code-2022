@@ -8,3 +8,7 @@ class Hockey():
 
     def show_t(self):
         print(self)
+
+    def ad(self):
+        sum = 1 + 1
+        print(sum)
