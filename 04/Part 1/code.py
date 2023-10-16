@@ -1,4 +1,4 @@
-with open("04\Part 1\input.txt") as file:
+with open("input.txt") as file:
   pairs = [i for i in file.read().strip().split("\n")]
 
 #print("Pairs Liste VOR for schleife: ",pairs)
