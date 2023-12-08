@@ -6,7 +6,7 @@ with open("TMovements.txt") as file:
     Movement = [i for i in file.read().strip().split("\n")]
 
 print("Dies is Layout vor bearbeitung: ",Layout)
-print("Dies is Movements vor bearbeitung: ",Movement)
+#print("Dies is Movements vor bearbeitung: ",Movement)
 
 # Sortieren von Movement in ein dictionary
 newMovement = {}
@@ -24,7 +24,6 @@ for i in Movement:
     }
     j+=1
 
-print(newMovement[2]["Destination"])
 
 
 
